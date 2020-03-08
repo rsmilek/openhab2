@@ -1,0 +1,24 @@
+sitemap openhab label="Radim's flat" {
+  Frame label="Gateway" {
+    Group item=gGateway
+  }
+  Frame label="Temperature Humidity" {
+    Default item=MiTempHumTemperature
+    Default item=MiTempHumHumidity
+    Group item=gTempHum
+  }
+  Frame label="Magnet" {
+    Text item=MiMagnetIsOpen
+    Default item=MiMagnetOpened
+    Group item=gMagnet
+  }
+//   Frame label="Robot" {
+//     Default item=RobotActionsVacuum
+
+//     Switch item=RobotActionsVacuum mappings=[ON="On",OFF="Off"]
+    
+//     Default item=RobotActionsControl
+//     Default item=RobotActionsCommands
+//     Group item=gVac
+//   }
+}
