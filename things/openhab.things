@@ -1,4 +1,4 @@
-Bridge mihome:bridge:7811dcfb0bc6 "Xiaomi Gateway" [ ipAddress="192.168.0.101", port=9898, key="jybwt862sdvmrf14", pollingInterval=1000 ] {
+Bridge mihome:bridge:7811dcfb0bc6 "Xiaomi Gateway 3" [ ipAddress="10.3.141.20", port=9898, key="fd27vp05jmnngcz2", pollingInterval=1000 ] {
   Things:
     gateway 7811dcfb0bc6 "Xiaomi Mi Smart Home Gateway" [itemId="7811dcfb0bc6"]
     sensor_magnet 158d0003033b82 "Xiaomi Door/Window Sensor" [itemId="158d0003033b82"]
