@@ -1,27 +1,29 @@
 sitemap openhab label="Radim's flat" {
-  Frame label="Gateway" {
-    Group item=gGateway
+  Group item=gVac {
+      Default item=MiRobotVacuumActionsControl
+      Default item=MiRobotVacuumStatusBattery 
+      Default item=MiRobotVacuumStatusCleanArea 
+      Default item=MiRobotVacuumStatusCleanTime 
+      Group item=gVacDetails
+      Default item=MiRobotVacuumCleaningMap
   }
-  Frame label="Temperature Humidity" {
-    Default item=MiTempHumTemperature
-    Default item=MiTempHumHumidity
-    Group item=gTempHum
-  }
-  Frame label="Magnet" {
-    Text item=MiMagnetIsOpen
-    Default item=MiMagnetOpened
-    Group item=gMagnet
-  }
-  Text label="IOT Chart" icon="chart"{
-    Webview url="http://192.168.0.10:8080/static/chart.html" height=33
-  } 
-//   Frame label="Robot" {
-//     Default item=RobotActionsVacuum
 
-//     Switch item=RobotActionsVacuum mappings=[ON="On",OFF="Off"]
-    
-//     Default item=RobotActionsControl
-//     Default item=RobotActionsCommands
-//     Group item=gVac
-//   }
+  Text label="IOT Chart" icon="line-increase" {
+    Webview url="http://192.168.0.11:5000" height=33
+  }
+
+  // Frame label="Gateway" {
+  //   Group item=gGateway
+  // }
+  // Frame label="Temperature Humidity" {
+  //   Default item=MiTempHumTemperature
+  //   Default item=MiTempHumHumidity
+  //   Group item=gTempHum
+  // }
+  // Frame label="Magnet" {
+  //   Text item=MiMagnetIsOpen
+  //   Default item=MiMagnetOpened
+  //   Group item=gMagnet
+  // }
+
 }

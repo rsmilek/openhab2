@@ -1,0 +1,60 @@
+Group       gVac                                        "Xiaomi Robot Vacuum"       <roborock>
+Group       gVacDetails                                 "Details"                   <none>          (gVac)
+Group       gVacLastClean                               "Last Clean"                <none>          (gVacDetails)
+Group       gVacHist                                    "Cleaning History"          <calendar>      (gVacDetails)
+Group       gVacStat                                    "Status Details"            <status>        (gVacDetails)
+Group       gVacCons                                    "Consumables Usage"         <chart>         (gVacDetails)
+Group       gVacDND                                     "Do Not Disturb Settings"   <moon>          (gVacDetails)
+Group       gVacNetwork                                 "Network Details"           <network>       (gVacDetails)
+
+String     MiRobotVacuumActionsControl                 "Control vacuum"             <switch>        (gVac)                  {channel="miio:generic:0F95952B:actions#control"}
+Number     MiRobotVacuumActionsFan                     "Vacuum Fan"                 <fan>           (gVacStat)              {channel="miio:generic:0F95952B:actions#fan"}
+
+Number     MiRobotVacuumStatusBattery                  "Battery Level [%1.0f%%]"    <battery>       (gVacStat)              {channel="miio:generic:0F95952B:status#battery"}
+Number     MiRobotVacuumStatusCleanArea                "Cleaned Area [%1.0fm²]"     <zoom>          (gVacStat)              {channel="miio:generic:0F95952B:status#clean_area"}
+Number     MiRobotVacuumStatusCleanTime                "Cleaning Time [%1.0f']"     <time>          (gVacStat)              {channel="miio:generic:0F95952B:status#clean_time"}
+String     MiRobotVacuumStatusErrorCode                "Error [%s]"                 <error>         (gVacStat)              {channel="miio:generic:0F95952B:status#error_code"}
+Number     MiRobotVacuumStatusFanPower                 "Fan Power [%1.0f %%]"       <signal>        (gVacStat)              {channel="miio:generic:0F95952B:status#fan_power"}
+Number     MiRobotVacuumStatusInCleaning               "In Cleaning Status [%1.0f]" <switch>        (gVacStat)              {channel="miio:generic:0F95952B:status#in_cleaning"}
+Switch     MiRobotVacuumStatusDndEnabled               "Do not Disturb Activated"                   (gVacStat)              {channel="miio:generic:0F95952B:status#dnd_enabled"}
+String     MiRobotVacuumStatusState                    "Status [%s]"                <status>        (gVacStat)              {channel="miio:generic:0F95952B:status#state"}
+
+Number     MiRobotVacuumConsumablesMainBrushTime       "Main Brush [%1.0f]"                         (gVacCons)              {channel="miio:generic:0F95952B:consumables#main_brush_time"}
+Number     MiRobotVacuumConsumablesMainBrushPercent    "Main Brush [%1.0f%%]"                       (gVacCons)              {channel="miio:generic:0F95952B:consumables#main_brush_percent"}
+Number     MiRobotVacuumConsumablesSideBrushTime       "Side Brush [%1.0f]"                         (gVacCons)              {channel="miio:generic:0F95952B:consumables#side_brush_time"}
+Number     MiRobotVacuumConsumablesSideBrushPercent    "Side Brush [%1.0f%%]"                       (gVacCons)              {channel="miio:generic:0F95952B:consumables#side_brush_percent"}
+Number     MiRobotVacuumConsumablesFilterTime          "Filter Time[%1.0f]"                         (gVacCons)              {channel="miio:generic:0F95952B:consumables#filter_time"}
+Number     MiRobotVacuumConsumablesFilterPercent       "Filter Time[%1.0f%%]"                       (gVacCons)              {channel="miio:generic:0F95952B:consumables#filter_percent"}
+Number     MiRobotVacuumConsumablesSensorDirtTime      "Sensor [%1.0f]"                             (gVacCons)              {channel="miio:generic:0F95952B:consumables#sensor_dirt_time"}
+Number     MiRobotVacuumConsumablesSensorDirtPercent   "Sensor [%1.0f%%]"                           (gVacCons)              {channel="miio:generic:0F95952B:consumables#sensor_dirt_percent"}
+
+Switch     MiRobotVacuumDndDndFunction                 "DnD Function"               <moon>          (gVacDND)               {channel="miio:generic:0F95952B:dnd#dnd_function"}
+String     MiRobotVacuumDndDndStart                    "DnD Start Time [%s]"        <clock>         (gVacDND)               {channel="miio:generic:0F95952B:dnd#dnd_start"}
+String     MiRobotVacuumDndDndEnd                      "DnD End Time [%s]"          <clock-on>      (gVacDND)               {channel="miio:generic:0F95952B:dnd#dnd_end"}
+
+Number     MiRobotVacuumHistoryTotalCleanArea          "Total Cleaned Area [%1.0fm²]" <zoom>        (gVacHist)              {channel="miio:generic:0F95952B:history#total_clean_area"}
+Number     MiRobotVacuumHistoryTotalCleanTime          "Total Clean Time [%1.0f']"  <clock>         (gVacHist)              {channel="miio:generic:0F95952B:history#total_clean_time"}
+Number     MiRobotVacuumHistoryTotalCleanCount         "Total # Cleanings [%1.0f]"  <office>        (gVacHist)              {channel="miio:generic:0F95952B:history#total_clean_count"}
+
+String     MiRobotVacuumNetworkSsid                    "Network SSID [%s]"          <network>       (gVacNetwork)           {channel="miio:generic:0F95952B:network#ssid"}
+String     MiRobotVacuumNetworkBssid                   "Network BSSID [%s]"         <network>       (gVacNetwork)           {channel="miio:generic:0F95952B:network#bssid"}
+Number     MiRobotVacuumNetworkRssi                    "Network RSSI [%1.0f]"       <network>       (gVacNetwork)           {channel="miio:generic:0F95952B:network#rssi"}
+Number     MiRobotVacuumNetworkLife                    "Uptime [%1.0f]"             <clock>         (gVacNetwork)           {channel="miio:generic:0F95952B:network#life"}
+
+DateTime   MiRobotVacuumLastCleanStartTime             "Cleaning start [%1$tA, %1$td.%1$tm.%1$tY]"  <none> (gVacLastClean)  {channel="miio:generic:0F95952B:cleaning#last_clean_start_time"}
+DateTime   MiRobotVacuumLastCleanEndTime               "Cleaning end [%1$tA, %1$td.%1$tm.%1$tY]"    <none> (gVacLastClean)  {channel="miio:generic:0F95952B:cleaning#last_clean_end_time"}
+Number     MiRobotVacuumLastCleanArea                  "Cleaning area  [%1.0fm²]"                   <none> (gVacLastClean)  {channel="miio:generic:0F95952B:cleaning#last_clean_area"}
+Number     MiRobotVacuumLastCleanDuration              "Cleaning duration"                          <none> (gVacLastClean)  {channel="miio:generic:0F95952B:cleaning#last_clean_duration"}
+Number     MiRobotVacuumLastCleanFinish                "Cleaning finished"                          <none> (gVacLastClean)  {channel="miio:generic:0F95952B:cleaning#last_clean_finish"}
+String     MiRobotVacuumLastCleanRecord                "Cleaning record"                            <none> (gVacLastClean)  {channel="miio:generic:0F95952B:cleaning#last_clean_record"}
+Number     MiRobotVacuumLastCleanError                 "Error [%d]"                                 <none> (gVacLastClean)  {channel="miio:generic:0F95952B:cleaning#last_clean_error"}
+
+Image      MiRobotVacuumCleaningMap                    "Cleaning map"                                                       {channel="miio:generic:0F95952B:cleaning#map"}
+
+// String     MiRobotVacuumActionsCommands                "Vacuum Command"                                             {channel="miio:generic:0F95952B:actions#commands"}
+// Switch     MiRobotVacuumActionsVacuum                  "Vacuum on/off"                                              {channel="miio:generic:0F95952B:actions#vacuum"}
+// Number     MiRobotVacuumStatusErrorId                  "Error"                                                      {channel="miio:generic:0F95952B:status#error_id"}
+// Number     MiRobotVacuumStatusMapPresent               "Map present"                                                {channel="miio:generic:0F95952B:status#map_present"}
+// Number     MiRobotVacuumStatusStateId                  "State"                                                      {channel="miio:generic:0F95952B:status#state_id"}
+// String     MiRobotVacuumConsumablesConsumableReset     "Reset consumable"                                           {channel="miio:generic:0F95952B:consumables#consumable_reset"}
+
