@@ -1,6 +1,6 @@
 sitemap openhab label="Radim's flat" {
   Group item=gVac {
-      Default item=MiRobotVacuumActionsControl
+      Switch item=MiRobotVacuumActionsControl mappings=[dock="Dock", vacuum="Clean", pause="Pause"]
       Default item=MiRobotVacuumStatusBattery 
       Default item=MiRobotVacuumStatusCleanArea 
       Default item=MiRobotVacuumStatusCleanTime 
@@ -9,7 +9,7 @@ sitemap openhab label="Radim's flat" {
   }
 
   Text label="IOT Chart" icon="line-increase" {
-    Webview url="http://192.168.0.11:5000" height=33
+    Webview url="http://192.168.0.11:5000" height=20
   }
 
   // Frame label="Gateway" {
