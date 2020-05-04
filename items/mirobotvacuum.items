@@ -5,7 +5,7 @@ Group       gVacHist                                    "Total Cleaning History"
 Group       gVacStat                                    "Status"                    <status_new>    (gVacDetails)
 Group       gVacCons                                    "Consumables Usage"         <consumables>   (gVacDetails)
 Group       gVacDND                                     "Do Not Disturb Settings"   <donotdisturb>  (gVacDetails)
-Group       gVacNetwork                                 "Network Details"           <network>       (gVacDetails)
+Group       gVacNetwork                                 "Network"                   <network>       (gVacDetails)
 
 String      MiRobotVacuumActionsControl                 "Control []"                <button>        (gVac)                  {channel="miio:generic:0F95952B:actions#control"}
 Number      MiRobotVacuumActionsFan                     "Vacuum Fan"                <fan>           (gVacStat)              {channel="miio:generic:0F95952B:actions#fan"}
@@ -39,7 +39,7 @@ Number      MiRobotVacuumHistoryTotalCleanCount         "Total # Cleanings [%1.0
 String      MiRobotVacuumNetworkSsid                    "Network SSID [%s]"         <none>          (gVacNetwork)           {channel="miio:generic:0F95952B:network#ssid"}
 String      MiRobotVacuumNetworkBssid                   "Network BSSID [%s]"        <none>          (gVacNetwork)           {channel="miio:generic:0F95952B:network#bssid"}
 Number      MiRobotVacuumNetworkRssi                    "Network RSSI [%1.0f]"      <none>          (gVacNetwork)           {channel="miio:generic:0F95952B:network#rssi"}
-Number      MiRobotVacuumNetworkLife                    "Uptime [%1.0f]"            <none>          (gVacNetwork)           {channel="miio:generic:0F95952B:network#life"}
+// Number      MiRobotVacuumNetworkLife                    "Uptime [%1.0f]"            <none>          (gVacNetwork)           {channel="miio:generic:0F95952B:network#life"}
 
 DateTime    MiRobotVacuumLastCleanStartTime             "Cleaning start [%1$ta %1$td.%1$tm.%1$tY %1$tH:%1$tM]" <none> (gVacLastClean) {channel="miio:generic:0F95952B:cleaning#last_clean_start_time"}
 DateTime    MiRobotVacuumLastCleanEndTime               "Cleaning end [%1$ta %1$td.%1$tm.%1$tY %1$tH:%1$tM]"   <none> (gVacLastClean) {channel="miio:generic:0F95952B:cleaning#last_clean_end_time"}
