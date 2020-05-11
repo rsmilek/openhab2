@@ -1,0 +1,7 @@
+Group               gMagnet                    "Xiaomi Magnet"                      <none>
+
+Contact             MiMagnetIsOpen             "Open status [MAP(magnet.map):%s]"   <none>        (gMagnet)         {channel="mihome:sensor_magnet:7811dcfb0bc6:158d0003033b82:isOpen"}
+DateTime            MiMagnetOpened             "Last time opened (date/time)"       <none>        (gMagnet)         {channel="mihome:sensor_magnet:7811dcfb0bc6:158d0003033b82:lastOpened"}
+Number              MiMagnetIsOpenAlarmTimer   "Alarm timer"                        <none>        (gMagnet)         {channel="mihome:sensor_magnet:7811dcfb0bc6:158d0003033b82:isOpenAlarmTimer"}
+Number              MiMagnetBatteryLevel       "Battery level"                      <none>        (gMagnet)         {channel="mihome:sensor_magnet:7811dcfb0bc6:158d0003033b82:batteryLevel"}
+Switch              MiMagnetLowBattery         "Low battery"                        <none>        (gMagnet)         {channel="mihome:sensor_magnet:7811dcfb0bc6:158d0003033b82:lowBattery"}

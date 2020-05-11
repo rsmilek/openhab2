@@ -1,0 +1,18 @@
+Bridge mqtt:broker:moquette [ host="localhost", secure=false ]
+{
+    Thing mqtt:topic:mihome {
+    Channels:
+        // Type switch : lamp "Kitchen Lamp" [ stateTopic="lamp/enabled", commandTopic="lamp/enabled/set" ]
+        // Type switch : fancylamp "Fancy Lamp" [ stateTopic="fancy/lamp/state", commandTopic="fancy/lamp/command", on="i-am-on", off="i-am-off" ]
+        // Type string : alarmpanel "Alarm system" [ stateTopic="alarm/panel/state", commandTopic="alarm/panel/set", allowedStates="ARMED_HOME,ARMED_AWAY,UNARMED" ]
+        // Type color : lampcolor "Kitchen Lamp color" [ stateTopic="lamp/color", commandTopic="lamp/color/set", rgb=true ]
+        // Type dimmer : blind "Blind" [ stateTopic="blind/state", commandTopic="blind/set", min=0, max=5, step=1 ]
+
+        Type string : pokusstring           "Pokus string"          [ stateTopic="pokus/state", commandTopic="pokus/set", allowedStates="ARMED_HOME,ARMED_AWAY,UNARMED" ]
+        Type string : magnetstatus          "Magnet status"         [ stateTopic="pokus/status", transformationPattern="JSONPATH:$.status"]
+        Type string : htsensorvoltage       "HT voltage"            [ stateTopic="pokus/htsensor", transformationPattern="JSONPATH:$.voltage"]
+        Type string : htsenortemperature     "HT temperature"        [ stateTopic="pokus/htsensor", transformationPattern="JSONPATH:$.temperature"]
+        Type string : htsensorhumidity      "HT humidity"           [ stateTopic="pokus/htsensor", transformationPattern="JSONPATH:$.humidity"]
+        //{"voltage":2975,"temperature":"2449","humidity":"4814"}
+    }
+}

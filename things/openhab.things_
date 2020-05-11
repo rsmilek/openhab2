@@ -1,0 +1,8 @@
+// Bridge mihome:bridge:7811dcfb0bc6 "Xiaomi Gateway 3" [ ipAddress="10.3.141.20", port=9898, key="fd27vp05jmnngcz2", pollingInterval=1000 ] {
+//   Things:
+//     gateway 7811dcfb0bc6 "Xiaomi Mi Smart Home Gateway" [itemId="7811dcfb0bc6"]
+//     sensor_magnet 158d0003033b82 "Xiaomi Door/Window Sensor" [itemId="158d0003033b82"]
+//     sensor_ht 158d00033b391f "Xiaomi Mi Temperature & Humidity Sensor" [itemId="158d00033b391f"]	
+// }
+
+// mqtt:broker:embededMqtt [ host="192.168.0.10", secure=false ]

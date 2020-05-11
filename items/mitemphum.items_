@@ -1,0 +1,6 @@
+Group                 gTempHum                 "Xiaomi Temperature Humidity"        <none>
+
+Number:Temperature     MiTempHumTemperature    "Temperature"                        <none>        (gTempHum)      {channel="mihome:sensor_ht:7811dcfb0bc6:158d00033b391f:temperature"}
+Number:Dimensionless   MiTempHumHumidity       "Humidity"                           <none>        (gTempHum)      {channel="mihome:sensor_ht:7811dcfb0bc6:158d00033b391f:humidity"}
+Number                 MiTempHumBatteryLevel   "Battery level"                      <none>        (gTempHum)      {channel="mihome:sensor_ht:7811dcfb0bc6:158d00033b391f:batteryLevel"}
+Switch                 MiTempHumLowBattery     "Low battery"                        <none>        (gTempHum)      {channel="mihome:sensor_ht:7811dcfb0bc6:158d00033b391f:lowBattery"}
