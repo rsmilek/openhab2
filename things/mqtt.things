@@ -10,9 +10,10 @@ Bridge mqtt:broker:moquette [ host="localhost", secure=false ]
 
         Type string : pokusstring           "Pokus string"          [ stateTopic="pokus/state", commandTopic="pokus/set", allowedStates="ARMED_HOME,ARMED_AWAY,UNARMED" ]
         Type string : magnetstatus          "Magnet status"         [ stateTopic="pokus/status", transformationPattern="JSONPATH:$.status"]
-        Type string : htsensorvoltage       "HT voltage"            [ stateTopic="pokus/htsensor", transformationPattern="JSONPATH:$.voltage"]
-        Type string : htsenortemperature     "HT temperature"        [ stateTopic="pokus/htsensor", transformationPattern="JSONPATH:$.temperature"]
-        Type string : htsensorhumidity      "HT humidity"           [ stateTopic="pokus/htsensor", transformationPattern="JSONPATH:$.humidity"]
+        Type string : htsensorvoltage       "HT voltage"            [ stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.voltage"]
+        Type string : htsenortemperature    "HT temperature"        [ stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.temperature"]
+        Type string : htsensorhumidity      "HT humidity"           [ stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.humidity"]
+
         //{"voltage":2975,"temperature":"2449","humidity":"4814"}
     }
 }
