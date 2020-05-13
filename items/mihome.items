@@ -1,5 +1,7 @@
 String	MiHome_PokusString      "Pokus string"						{channel="mqtt:topic:mihome:pokusstring"}
+
 String	MiHome_MagnetStatus	    "Magnet status [%s]"				{channel="mqtt:topic:mihome:magnetstatus"}
+
 String	MiHome_HtVoltage	    "HT Voltage [%s]"					{channel="mqtt:topic:mihome:htsensorvoltage"}
 String	MiHome_HtTemperature	"HT Temperature [%s]"       		{channel="mqtt:topic:mihome:htsenortemperature"}
 String	MiHome_HtHumidity	    "HT Humidity [%s]"					{channel="mqtt:topic:mihome:htsensorhumidity"}
