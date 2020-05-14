@@ -1,7 +1,8 @@
-String	MiHome_PokusString      "Pokus string"						{channel="mqtt:topic:mihome:pokusstring"}
+String	PokusString                     "Pokus string"			    {channel="mqtt:topic:pokus:pokusstring"}
 
-String	MiHome_MagnetStatus	    "Magnet status [%s]"				{channel="mqtt:topic:mihome:magnetstatus"}
+String  MiHome_HTBedroomVoltage         "HT voltage [%s]"           {channel="mqtt:topic:moquette:mihome_ht_bedroom:voltage"}
+String  MiHome_HTBedroomTemperature     "HT temperature [%s]"       {channel="mqtt:topic:moquette:mihome_ht_bedroom:temperature"}
+String  MiHome_HTBedroomHumidity        "HT humidity [%s]"          {channel="mqtt:topic:moquette:mihome_ht_bedroom:humidity"}
 
-String	MiHome_HtVoltage	    "HT Voltage [%s]"					{channel="mqtt:topic:mihome:htsensorvoltage"}
-String	MiHome_HtTemperature	"HT Temperature [%s]"       		{channel="mqtt:topic:mihome:htsenortemperature"}
-String	MiHome_HtHumidity	    "HT Humidity [%s]"					{channel="mqtt:topic:mihome:htsensorhumidity"}
+String  MiHome_DoorVoltage              "Magnet voltage [%s]"       {channel="mqtt:topic:moquette:mihome_magnet_door:voltage"}
+String  MiHome_DoorStatus               "Magnet status [%s]"        {channel="mqtt:topic:moquette:mihome_magnet_door:status"}

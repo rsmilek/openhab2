@@ -13,10 +13,10 @@ sitemap openhab label="Radim's Home" {
   }
 
   Default item=MiHome_PokusString
-  Default item=MiHome_MagnetStatus
-  Default item=MiHome_HtVoltage
-  Default item=MiHome_HtTemperature
-  Default item=MiHome_HtHumidity
+  
+  Default item=MiHome_HTBedroomVoltage
+  Default item=MiHome_HTBedroomTemperature
+  Default item=MiHome_HTBedroomHumidity
   
   // Frame label="Gateway" {
   //   Group item=gGateway
