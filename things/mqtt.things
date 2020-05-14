@@ -1,19 +1,18 @@
-Bridge mqtt:broker:moquette [ host="localhost", secure=false ]
+Bridge mqtt:broker:moquette "Moquette MQTT Broker" @ "MQTT" [ host="localhost", secure=false ]
 {
-    Thing mqtt:topic:pokus "Pokus" {
-    Channels:
+    Thing topic pokus "Pokus" {
         Type string : pokusstring           "Pokus string"          [stateTopic="pokus/state", commandTopic="pokus/set", allowedStates="ARMED_HOME,ARMED_AWAY,UNARMED"]
     }
 
-    //{"voltage":2975,"temperature":"2449","humidity":"4814"}
-    Thing topic mihome_ht_bedroom "HT Bedroom" @ "MiHome" {
+    // {"voltage":2975,"temperature":"2449","humidity":"4814"}
+    Thing topic mihome_ht_bedroom "Mi HT Bedroom" @ "MQTT" {
         Type string : voltage               "HT Voltage"            [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.voltage"]
         Type string : temperature           "HT Temperature"        [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.temperature"]
         Type string : humidity              "HT Humidity"           [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.humidity"]
     }
 
     // {"voltage":3015,"status":"close"}
-    Thing topic mihome_magnet_door "Door" @ "MiHome" {
+    Thing topic mihome_magnet_door "Mi Magnet Door" @ "MQTT" {
         Type string : voltage               "Magnet Voltage"        [stateTopic="mihome/magnet/7811dcfb0bc6/158d0003033b82", transformationPattern="JSONPATH:$.voltage"]
         Type string : status                "Magnet Status"         [stateTopic="mihome/magnet/7811dcfb0bc6/158d0003033b82", transformationPattern="JSONPATH:$.status"]
     }

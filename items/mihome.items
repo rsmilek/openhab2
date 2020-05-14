@@ -1,4 +1,4 @@
-String	PokusString                     "Pokus string"			    {channel="mqtt:topic:pokus:pokusstring"}
+String  PokusString                     "Pokus string"              {channel="mqtt:topic:moquette:pokus:pokusstring"}
 
 String  MiHome_HTBedroomVoltage         "HT voltage [%s]"           {channel="mqtt:topic:moquette:mihome_ht_bedroom:voltage"}
 String  MiHome_HTBedroomTemperature     "HT temperature [%s]"       {channel="mqtt:topic:moquette:mihome_ht_bedroom:temperature"}
