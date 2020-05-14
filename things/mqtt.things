@@ -1,9 +1,5 @@
 Bridge mqtt:broker:moquette "Moquette MQTT Broker" @ "MQTT" [ host="localhost", secure=false ]
 {
-    Thing topic pokus "Pokus" {
-        Type string : pokusstring           "Pokus string"          [stateTopic="pokus/state", commandTopic="pokus/set", allowedStates="ARMED_HOME,ARMED_AWAY,UNARMED"]
-    }
-
     // {"voltage":2975,"temperature":"2449","humidity":"4814"}
     Thing topic mihome_ht_bedroom "Mi HT Bedroom" @ "MQTT" {
         Type string : voltage               "HT Voltage"            [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.voltage"]

@@ -12,8 +12,6 @@ sitemap openhab label="Radim's Home" {
     Webview url="http://192.168.0.11:5000" height=20 icon="none" 
   }
 
-  Default item=PokusString
-  
   Default item=MiHome_HTBedroomVoltage
   Default item=MiHome_HTBedroomTemperature
   Default item=MiHome_HTBedroomHumidity
