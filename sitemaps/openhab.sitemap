@@ -15,7 +15,10 @@ sitemap openhab label="Radim's Home" {
   Default item=MiHome_HTBedroomVoltage
   Default item=MiHome_HTBedroomTemperature
   Default item=MiHome_HTBedroomHumidity
-  
+
+  Default item=MiHome_DoorVoltage
+  Default item=MiHome_DoorStatus
+
   // Frame label="Gateway" {
   //   Group item=gGateway
   // }
