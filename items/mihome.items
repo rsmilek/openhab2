@@ -1,6 +1,6 @@
-String  MiHome_DoorVoltage              "Magnet voltage [%s]"       {channel="mqtt:topic:moquette:mihome_magnet_door:voltage"}
-String  MiHome_DoorStatus               "Magnet status [%s]"        {channel="mqtt:topic:moquette:mihome_magnet_door:status"}
+Number  MiHome_DoorVoltage              "Magnet voltage [%1.3fV]"                   {channel="mqtt:topic:moquette:mihome_magnet_door:voltage"}
+Number  MiHome_DoorStatus               "Magnet status [MAP(magnet.map):%s]"        {channel="mqtt:topic:moquette:mihome_magnet_door:status"}
 
-String  MiHome_HTBedroomVoltage         "HT voltage [%s]"           {channel="mqtt:topic:moquette:mihome_ht_bedroom:voltage"}
-String  MiHome_HTBedroomTemperature     "HT temperature [%s]"       {channel="mqtt:topic:moquette:mihome_ht_bedroom:temperature"}
-String  MiHome_HTBedroomHumidity        "HT humidity [%s]"          {channel="mqtt:topic:moquette:mihome_ht_bedroom:humidity"}
+Number  MiHome_HTBedroomVoltage         "HT voltage [%1.3fV]"                       {channel="mqtt:topic:moquette:mihome_ht_bedroom:voltage"}
+Number  MiHome_HTBedroomTemperature     "HT temperature [%1.1f°C]"                  {channel="mqtt:topic:moquette:mihome_ht_bedroom:temperature"}
+Number  MiHome_HTBedroomHumidity        "HT humidity [%1.1f%%]"                     {channel="mqtt:topic:moquette:mihome_ht_bedroom:humidity"}

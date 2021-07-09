@@ -1,15 +1,15 @@
 Bridge mqtt:broker:moquette "Moquette MQTT Broker" @ "MQTT" [ host="localhost", secure=false ]
 {
-    // {"voltage":2975,"temperature":"2449","humidity":"4814"}
+    // {"voltage":2.975,"temperature":24.49,"humidity":48.14}
     Thing topic mihome_ht_bedroom "Mi HT Bedroom" @ "MQTT" {
-        Type string : voltage               "HT Voltage"            [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.voltage"]
-        Type string : temperature           "HT Temperature"        [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.temperature"]
-        Type string : humidity              "HT Humidity"           [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.humidity"]
+        Type number : voltage               "HT Voltage"            [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.voltage"]
+        Type number : temperature           "HT Temperature"        [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.temperature"]
+        Type number : humidity              "HT Humidity"           [stateTopic="mihome/sensor_ht/7811dcfb0bc6/158d00033b391f", transformationPattern="JSONPATH:$.humidity"]
     }
 
-    // {"voltage":3015,"status":"close"}
+    // {"voltage":3.015,"status":1}
     Thing topic mihome_magnet_door "Mi Magnet Door" @ "MQTT" {
-        Type string : voltage               "Magnet Voltage"        [stateTopic="mihome/magnet/7811dcfb0bc6/158d0003033b82", transformationPattern="JSONPATH:$.voltage"]
-        Type string : status                "Magnet Status"         [stateTopic="mihome/magnet/7811dcfb0bc6/158d0003033b82", transformationPattern="JSONPATH:$.status"]
-    }
+        Type number : voltage               "Magnet Voltage"        [stateTopic="mihome/magnet/7811dcfb0bc6/158d0003033b82", transformationPattern="JSONPATH:$.voltage"]
+        Type number : status                "Magnet Status"         [stateTopic="mihome/magnet/7811dcfb0bc6/158d0003033b82", transformationPattern="JSONPATH:$.status"]
+   }
 }
